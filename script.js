@@ -9,13 +9,18 @@
 // console.log(JSON.stringify(mahasiswa));
 
 //JSON ke objek
-let xhr = new XMLHttpRequest();
-xhr.onreadystatechange =function(){
-    if(xhr.readyState == 4 && xhr.status==200){
-        let mahasiswa = JSON.parse(this.responseText);
-        console.log(mahasiswa); 
-    }
-}
+// let xhr = new XMLHttpRequest();
+// xhr.onreadystatechange =function(){
+//     if(xhr.readyState == 4 && xhr.status==200){
+//         let mahasiswa = JSON.parse(this.responseText);
+//         console.log(mahasiswa); 
+//     }
+// }
 
-xhr.open('GET', 'baru.json' , true);
-xhr.send();
+// xhr.open('GET', 'baru.json' , true);
+// xhr.send();
+
+//JSON jQuery 
+$.getJSON('baru.json', function(data){
+    console.log(data);
+});
